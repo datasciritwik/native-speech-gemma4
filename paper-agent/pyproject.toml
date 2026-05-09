@@ -1,0 +1,26 @@
+[project]
+name = "paper-agent"
+version = "0.1.0"
+description = "Autonomous agent for triaging and extracting engineering intelligence from academic papers"
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit",
+    "langgraph",
+    "langchain",
+    "langchain-deepseek",
+    "pymupdf",
+    "pdf2image",
+    "pillow",
+    "pyyaml",
+    "jinja2",
+]
+
+[project.scripts]
+paper-agent = "paper_agent.app:main"
+
+[build-system]
+requires = ["setuptools>=75.8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
